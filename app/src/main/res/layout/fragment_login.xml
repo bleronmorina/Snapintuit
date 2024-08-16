@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.auth.fragments.LoginFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/ic_magnifying_hand"
+        android:id="@+id/loginImage"/>
+
+    <TextView
+        android:layout_below="@+id/loginImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:fontFamily="@font/montserrat_black"
+
+        android:layout_marginStart="25dp"
+        android:textSize="30dp"
+        android:id="@+id/loginText"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:layout_below="@+id/loginText"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/montserrat_black"
+        android:id="@+id/emailLabel"
+
+        />
+        <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="filanfisteku@email.com"
+        android:id="@+id/emailInput"
+        android:layout_below="@+id/emailLabel"
+        android:layout_marginHorizontal="20dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_below="@+id/emailInput"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/montserrat_black"
+        android:id="@+id/passwordLabel"
+
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="***********"
+        android:id="@+id/passwordInput"
+        android:layout_below="@+id/passwordLabel"
+        android:layout_marginHorizontal="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        app:cornerRadius ="5dp"
+/>
+
+
+</RelativeLayout>
