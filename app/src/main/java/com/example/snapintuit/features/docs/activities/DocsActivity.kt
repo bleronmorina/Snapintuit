@@ -1,35 +1,18 @@
 package com.example.snapintuit.features.docs.activities
 
-import android.app.Activity
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.IntentSenderRequest
-import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.snapintuit.R
-import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
+import com.example.snapintuit.features.docs.viewmodel.DocViewModel
 
 class DocsActivity : AppCompatActivity() {
 
-    lateinit var scannerLauncher : ActivityResultLauncher<IntentSenderRequest>
+    val docsDocViewModel : DocViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_login)
+        setContentView(R.layout.activity_docs)
 
-
-
-        scannerLauncher = registerForActivityResult(
-            ActivityResultContracts.StartIntentSenderForResult()
-        ) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                val scanningResult =
-                    GmsDocumentScanningResult.fromActivityResultIntent(result.data)
-                scanningResult?.pdf?.let { pdf ->
-                    Log.d("pdfName", pdf.uri.lastPathSegment.toString())
-                }
-            }
-        }
 
 
     }

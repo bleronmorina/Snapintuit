@@ -1,6 +1,7 @@
 package com.example.snapintuit.features.auth.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,22 +18,24 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welcome, container, false)
+        binding = FragmentWelcomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding = FragmentWelcomeBinding.bind(view)
-
-        binding.loginButton.setOnClickListener(){
-            safeNavigate(WelcomeFragmentDirections.welcomeToLoginFragment())
+        binding.loginButton.setOnClickListener {
+            Log.d("WelcomeFragment", "Login Button Clicked")
+            safeNavigate(WelcomeFragmentDirections.actionWelcomeFragmentToLoginFragment())
         }
 
-        binding.registerButton.setOnClickListener(){
+        binding.registerButton.setOnClickListener {
+            Log.d("WelcomeFragment", "Register Button Clicked")
             safeNavigate(WelcomeFragmentDirections.actionWelcomeFragmentToRegisterFragment())
         }
+        Log.i("TAG", "onViewCreated:${binding.loginButton.height} && ${binding.registerButton.height}")
     }
+
 
 }

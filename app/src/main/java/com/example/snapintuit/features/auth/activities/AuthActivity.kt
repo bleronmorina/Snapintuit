@@ -1,5 +1,6 @@
 package com.example.snapintuit.features.auth.activities
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity

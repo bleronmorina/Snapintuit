@@ -54,12 +54,15 @@ dependencies {
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.swiperefreshlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
     implementation(libs.play.services.mlkit.document.scanner)
-
-
-
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation(libs.android.pdf.viewer)
+    implementation(libs.logging.interceptor)
+    implementation(libs.androidx.datastore.preferences.core)
+    implementation(libs.material.v1120)
 }
